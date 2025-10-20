@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Shield, TrendingUp, Users } from "lucide-react";
 import heroImage from "@/assets/hero-image.jpg";
+import logo from "@/assets/logo.jpeg";
 
 const Hero = () => {
   return (
@@ -23,9 +24,13 @@ const Hero = () => {
             </span>
           </div>
 
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6 text-foreground leading-tight">
-            JLB Assessoria Contábil
-          </h1>
+          <div className="mb-4 sm:mb-6">
+            <img 
+              src={logo} 
+              alt="JLB Assessoria Contábil" 
+              className="h-16 sm:h-20 md:h-24 lg:h-28 xl:h-32 w-auto"
+            />
+          </div>
 
           <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-light mb-6 sm:mb-8 text-muted-foreground leading-relaxed">
             Garantindo informações seguras e transparentes para o crescimento sustentável do seu negócio
