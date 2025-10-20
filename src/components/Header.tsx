@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import logo from "@/assets/logo.jpeg";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -41,11 +42,12 @@ const Header = () => {
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
-          <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 sm:w-10 sm:h-10 bg-primary rounded-lg flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-base sm:text-xl">JLB</span>
-            </div>
-            <span className="font-semibold text-sm sm:text-base md:text-lg text-foreground">JLB Assessoria Contábil</span>
+          <div className="flex items-center space-x-3">
+            <img 
+              src={logo} 
+              alt="JLB Assessoria Contábil" 
+              className="h-10 sm:h-12 md:h-14 w-auto"
+            />
           </div>
 
           {/* Desktop Navigation */}
