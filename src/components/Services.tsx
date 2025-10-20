@@ -56,18 +56,18 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-20 bg-background">
+    <section id="services" className="py-12 sm:py-16 md:py-20 bg-background">
       <div className="container mx-auto px-4">
         {/* Services */}
-        <div className="mb-20 animate-fade-in">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">Nossos serviços</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+        <div className="mb-12 sm:mb-16 md:mb-20 animate-fade-in">
+          <div className="text-center mb-8 sm:mb-10 md:mb-12">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 text-foreground">Nossos serviços</h2>
+            <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto px-4">
               Soluções completas em contabilidade, gestão fiscal e trabalhista para empresas de todos os segmentos
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {services.map((service, index) => {
               const Icon = service.icon;
               return (
@@ -75,14 +75,14 @@ const Services = () => {
                   key={index}
                   className="border-border hover:border-primary/50 transition-all duration-300 hover:shadow-gold hover:-translate-y-1"
                 >
-                  <CardHeader>
-                    <div className="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                      <Icon className="h-7 w-7 text-primary" />
+                  <CardHeader className="pb-3 sm:pb-6">
+                    <div className="w-12 h-12 sm:w-14 sm:h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-3 sm:mb-4">
+                      <Icon className="h-6 w-6 sm:h-7 sm:w-7 text-primary" />
                     </div>
-                    <CardTitle className="text-xl text-card-foreground">{service.title}</CardTitle>
+                    <CardTitle className="text-lg sm:text-xl text-card-foreground">{service.title}</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-muted-foreground">{service.description}</p>
+                    <p className="text-sm sm:text-base text-muted-foreground">{service.description}</p>
                   </CardContent>
                 </Card>
               );
@@ -92,14 +92,14 @@ const Services = () => {
 
         {/* Plans */}
         <div className="animate-fade-in">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">Planos personalizados</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <div className="text-center mb-8 sm:mb-10 md:mb-12">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 text-foreground">Planos personalizados</h2>
+            <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto px-4">
               Escolha o plano ideal para sua empresa com condições diferenciadas e suporte contínuo
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 max-w-5xl mx-auto">
             {plans.map((plan, index) => (
               <Card
                 key={index}
@@ -109,23 +109,23 @@ const Services = () => {
                     : ""
                 }`}
               >
-                <CardHeader>
+                <CardHeader className="pb-3 sm:pb-6">
                   {plan.highlight && (
                     <div className="inline-block self-start mb-2 px-3 py-1 bg-primary/10 rounded-full">
                       <span className="text-primary text-xs font-semibold">Mais popular</span>
                     </div>
                   )}
-                  <CardTitle className="text-2xl text-card-foreground">{plan.title}</CardTitle>
-                  <p className="text-muted-foreground mt-2">{plan.description}</p>
+                  <CardTitle className="text-xl sm:text-2xl text-card-foreground">{plan.title}</CardTitle>
+                  <p className="text-sm sm:text-base text-muted-foreground mt-2">{plan.description}</p>
                 </CardHeader>
                 <CardContent>
-                  <ul className="space-y-3 mb-6">
+                  <ul className="space-y-2 sm:space-y-3 mb-5 sm:mb-6">
                     {plan.features.map((feature, idx) => (
                       <li key={idx} className="flex items-start">
-                        <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center mr-3 flex-shrink-0 mt-0.5">
-                          <div className="w-2 h-2 rounded-full bg-primary"></div>
+                        <div className="w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-primary/10 flex items-center justify-center mr-2 sm:mr-3 flex-shrink-0 mt-0.5">
+                          <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-primary"></div>
                         </div>
-                        <span className="text-muted-foreground text-sm">{feature}</span>
+                        <span className="text-muted-foreground text-xs sm:text-sm">{feature}</span>
                       </li>
                     ))}
                   </ul>
@@ -133,8 +133,8 @@ const Services = () => {
                     variant={plan.highlight ? "default" : "outline"}
                     className={
                       plan.highlight
-                        ? "w-full bg-primary hover:bg-accent text-primary-foreground"
-                        : "w-full border-primary/60 text-foreground hover:bg-secondary"
+                        ? "w-full bg-primary hover:bg-accent text-primary-foreground text-sm sm:text-base"
+                        : "w-full border-primary/60 text-foreground hover:bg-secondary text-sm sm:text-base"
                     }
                     onClick={() => window.open("https://wa.me/5584999035663", "_blank")}
                   >

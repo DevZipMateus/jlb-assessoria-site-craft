@@ -42,10 +42,10 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-xl">JLB</span>
+            <div className="w-8 h-8 sm:w-10 sm:h-10 bg-primary rounded-lg flex items-center justify-center">
+              <span className="text-primary-foreground font-bold text-base sm:text-xl">JLB</span>
             </div>
-            <span className="font-semibold text-lg text-foreground">JLB Assessoria Contábil</span>
+            <span className="font-semibold text-sm sm:text-base md:text-lg text-foreground">JLB Assessoria Contábil</span>
           </div>
 
           {/* Desktop Navigation */}
@@ -61,11 +61,12 @@ const Header = () => {
             ))}
             <Button
               variant="default"
-              size="lg"
+              size="default"
               onClick={() => window.open("https://wa.me/5584999035663", "_blank")}
-              className="bg-primary hover:bg-accent text-primary-foreground"
+              className="bg-primary hover:bg-accent text-primary-foreground lg:px-6"
             >
-              Falar com especialista
+              <span className="hidden lg:inline">Falar com especialista</span>
+              <span className="lg:hidden">Contato</span>
             </Button>
           </nav>
 
