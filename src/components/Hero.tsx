@@ -24,11 +24,11 @@ const Hero = () => {
             </span>
           </div>
 
-          <div className="mb-6 sm:mb-8 flex justify-center">
+          <div className="mb-6 sm:mb-8 flex justify-center items-center">
             <img 
               src={logo} 
               alt="JLB Assessoria Contábil" 
-              className="h-24 sm:h-32 md:h-40 lg:h-48 xl:h-56 w-auto"
+              className="h-32 sm:h-40 md:h-52 lg:h-64 xl:h-72 w-auto max-w-full"
             />
           </div>
 
